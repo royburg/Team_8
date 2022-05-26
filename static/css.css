@@ -1,0 +1,173 @@
+:root{
+    --pink: rgb(240, 128, 128);
+    --headcolor:  #17eaa4;
+    --bej: rgb(213, 213, 148);
+    --black: #222;
+    --gold: gold;
+    --hover: rgba(0, 0, 0, 0.6);
+    --white: ffffff;
+    
+  }
+  body{
+    background-image: url(../static/photo.jpeg);
+    background-repeat: no-repeat;
+    font-family:myFirstFont ;
+}
+.body2{
+  background-image: url(../static/photoBlur.jpg);
+  background-repeat: no-repeat;
+    font-family:myFirstFont ;
+}
+  .container {
+    padding-right: 10px;
+    background:transparent;
+    
+  } 
+  .container::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .logo {
+    float: left;
+    margin-left: 60px ;
+    font-family: mySecondFont;
+    font-size: 40px;
+    color: var(--headcolor);
+  }
+  
+  .dogIcon{
+    float: right;
+  }
+  
+  /* nav -----------------------------------------------------------------------*/
+  .active {
+    color:var(--gold); 
+    border:1px solid var(--gold);
+  }
+  
+  nav {
+    float: left;
+    margin-left: 30px;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left:40px;
+    padding-top: 43px;
+  
+    position: relative;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  nav a:hover {
+    color: var(--black);
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: var(--gray);
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
+
+
+
+
+/* buttons for the main */
+.buttonsContainer{
+    width: 50%;
+    padding: 10px;
+}
+.button-56 {
+
+    text-decoration: none;
+margin: 100px auto;
+  align-items: center;
+  background-color: #e3fef3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display:flex;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  width: 200px;
+  font-family:  myFirstFont;
+}
+.button-56 a {
+    color: var(--gray);
+    text-decoration: none;
+  }
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+#button2 {
+    visibility:hidden;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../static/Dosis-ExtraBold.ttf);
+  
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url(../static/Merienda-Regular.ttf);
+
+}
