@@ -196,6 +196,7 @@ background-color: #e3fef3;
   #brand{
     margin-left: 25px;
   }
+<<<<<<< HEAD
 #find{
   margin-top: 95px;
   margin-left: 30px;
@@ -211,6 +212,13 @@ background-color: #e3fef3;
   
 }
 
+=======
+  #map {
+      height: 350px;
+      width: 450px;
+      margin-top: 50px;
+  }
+>>>>>>> 83f7d8df4de40885081db76e408ee08431fae744
 
 @font-face {
     font-family: myFirstFont;
@@ -222,3 +230,5 @@ background-color: #e3fef3;
   src: url(../static/Merienda-Regular.ttf);
 
 }
+
+
