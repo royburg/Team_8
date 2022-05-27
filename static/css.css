@@ -196,6 +196,20 @@ background-color: #e3fef3;
   #brand{
     margin-left: 25px;
   }
+#find{
+  margin-top: 95px;
+  margin-left: 30px;
+  text-decoration: none;
+  align-items: center;
+  font-family:  myFirstFont;
+  line-height: 24px;
+  width: 100px;
+  border-radius: 8px;
+  background-color: #092419;
+  color: #e3fef3;
+  
+  
+}
 
 
 @font-face {
