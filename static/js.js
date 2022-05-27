@@ -57,12 +57,9 @@ function GetLocation() {
   } else {
   document.getElementById("location_p").innerHTML="Geolocation is not supported by this browser.";
   }
+  document.getElementById("afterNearby").style.visibility = "visible";
   document.getElementById("map").style.visibility = "visible";
-
-
 }
-
-
   function showPosition(position) {
       var z = position.coords.latitude;
       var t = position.coords.longitude;
