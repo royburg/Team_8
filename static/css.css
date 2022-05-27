@@ -196,10 +196,8 @@ background-color: #e3fef3;
   #brand{
     margin-left: 25px;
   }
-<<<<<<< HEAD
 #find{
   margin-top: 95px;
-  margin-left: 30px;
   text-decoration: none;
   align-items: center;
   font-family:  myFirstFont;
@@ -208,17 +206,26 @@ background-color: #e3fef3;
   border-radius: 8px;
   background-color: #092419;
   color: #e3fef3;
+  height: 30px;
   
   
 }
 
-=======
-  #map {
-      height: 350px;
-      width: 450px;
-      margin-top: 50px;
-  }
->>>>>>> 83f7d8df4de40885081db76e408ee08431fae744
+#city{
+  position: absolute;
+  margin-top: 92px ;
+  top: 2%;
+  right: 2%;
+  height: 20px;
+  background-color: #e3fef3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  font-family:  myFirstFont;
+  width: 150px;
+  height: 30px;
+}
+
 
 @font-face {
     font-family: myFirstFont;
