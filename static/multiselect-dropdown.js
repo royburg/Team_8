@@ -6,7 +6,8 @@ style.innerHTML = `
   padding: 2px 5px 0px 5px;
   border-radius: 4px;
   border: solid 1px #ced4da;
-  background-color: white;
+  background-color:  #e3fef3;
+  color: black;
   position: relative;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -55,9 +56,9 @@ style.innerHTML = `
 }
 .multiselect-dropdown-list{
   padding:2px;
-  height: 15rem;
   overflow-y:auto;
   overflow-x: hidden;
+  background-color:  #e3fef3;
 }
 .multiselect-dropdown-list::-webkit-scrollbar {
   width: 6px;
@@ -88,7 +89,7 @@ document.head.appendChild(style);
 function MultiselectDropdown(options){
   var config={
     search:true,
-    height:'15rem',
+    // height:'15rem',
     placeholder:'select',
     txtSelected:'selected',
     txtAll:'All',

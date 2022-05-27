@@ -37,10 +37,7 @@
     font-size: 40px;
     color: var(--headcolor);
   }
-  
-  .dogIcon{
-    float: right;
-  }
+
   
   /* nav -----------------------------------------------------------------------*/
   .active {
@@ -101,14 +98,16 @@
 /* buttons for the main */
 .buttonsContainer{
   float: left;
-    width: 40%;
+    width: 50%;
     padding: 10px;
+    margin-left:100px;
+    margin-top: 50px;
 }
+
 .button-56 {
 
   text-decoration: none;
   align-items: center;
-  margin: 100px auto;
   background-color: #e3fef3;
   border: 2px solid #111;
   border-radius: 8px;
@@ -165,60 +164,56 @@
 
 .tohen {
   float:left;
-  color: #17eaa4;
+  width: 50%;
+  color:var(--headcolor);
   font-size: large;
+  margin-top: 100px;
   margin-left: 100px;
   position: relative;
 }
-
-
-.tohen input{
-border: none;
-margin-top: 90px ;
-margin-left: 10px ;
-height: 30px;
-width: 250px;
-background-color: #e3fef3;
-  border: 2px solid #111;
-  border-radius: 8px;
-}
 .tohen button{
-  position: absolute;
-  margin-top: 92px ;
-  top: 2%;
-  right: 2%;
-  height: 20px;
-  background-color: #092419;
-  border: 2px solid #111;
-  border-radius: 8px;
-  color: #e3fef3;
-  }
-  #brand{
-    margin-left: 25px;
-  }
-<<<<<<< HEAD
-#find{
-  margin-top: 95px;
-  margin-left: 30px;
-  text-decoration: none;
-  align-items: center;
-  font-family:  myFirstFont;
-  line-height: 24px;
-  width: 100px;
-  border-radius: 8px;
-  background-color: #092419;
-  color: #e3fef3;
-  
-  
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: var(--headcolor);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  font-family: myFirstFont;
+  margin-top: 60px;
+  margin-left: 90px;
+
 }
 
-=======
-  #map {
-      height: 350px;
-      width: 450px;
-      margin-top: 50px;
+.tohen button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.tohen button:active {
+  transform: translateY(-1px);
+}
+  #brands {
+    width: 300px;
   }
->>>>>>> 83f7d8df4de40885081db76e408ee08431fae744
+  #map {
+    height: 350px;
+    width: 450px;
+    margin-top: 50px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+  
+
+
 
 @font-face {
     font-family: myFirstFont;
@@ -230,5 +225,3 @@ background-color: #e3fef3;
   src: url(../static/Merienda-Regular.ttf);
 
 }
-
-
