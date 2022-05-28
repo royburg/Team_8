@@ -18,7 +18,12 @@
   background-image: url(../static/photoBlur.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+<<<<<<< HEAD
   font-family:myFirstFont ;
+=======
+    font-family:myFirstFont ;
+    color:white;
+>>>>>>> 6dfda598b01103e7ee9c353ecde1e28394dbaf18
 }
   .container {
     padding-right: 10px;
@@ -37,10 +42,7 @@
     font-size: 40px;
     color: var(--headcolor);
   }
-  
-  .dogIcon{
-    float: right;
-  }
+
   
   /* nav -----------------------------------------------------------------------*/
   .active {
@@ -100,14 +102,16 @@
 /* buttons for the main */
 .buttonsContainer{
   float: left;
-    width: 40%;
+    width: 50%;
     padding: 10px;
+    margin-left:100px;
+    margin-top: 50px;
 }
+
 .button-56 {
 
   text-decoration: none;
   align-items: center;
-  margin: 100px auto;
   background-color: #e3fef3;
   border: 2px solid #111;
   border-radius: 8px;
@@ -164,39 +168,75 @@
 
 .tohen {
   float:left;
-  color: #17eaa4;
+  width: 50%;
   font-size: large;
+  margin-top: 100px;
   margin-left: 100px;
   position: relative;
 }
+.nearbyBtn{
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: var(--headcolor);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  font-family: myFirstFont;
+  margin-top: 60px;
+  margin-left: 90px;
+  margin-bottom: 70px;
 
-
-.tohen input{
-border: none;
-margin-top: 90px ;
-margin-left: 10px ;
-height: 30px;
-width: 250px;
-background-color: #e3fef3;
-  border: 2px solid #111;
-  border-radius: 8px;
 }
-.tohen button{
-  position: absolute;
-  margin-top: 92px ;
-  top: 2%;
-  right: 2%;
-  height: 20px;
-  background-color: #092419;
+
+.nearbyBtn:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.nearbyBtn:active {
+  transform: translateY(-1px);
+}
+  #brands {
+    width: 300px;
+  }
+#map {
+    height: 350px;
+    width: 450px;
+    border-radius: 10px;
+    visibility: hidden;
+    margin-bottom: 30px;
+
+}
+#afterNearby{
+  visibility: hidden;
+}
+.compare label{
+  margin-left: 220px;
+  font-size: large;
+}
+.compare input{
+  margin-top: 10px;
+  margin-left: 180px;
+  font-size: 20px;
+  background-color: #e3fef3;
   border: 2px solid #111;
   border-radius: 8px;
-  color: #e3fef3;
-  }
-  #brand{
-    margin-left: 25px;
-  }
-
-
+  height:max-content;
+  width: 200px
+}
+#calculate{
+  margin-left: 200px;
+  margin-top: 40px;
+}
 @font-face {
     font-family: myFirstFont;
     src: url(../static/Dosis-ExtraBold.ttf);

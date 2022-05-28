@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
     e.target.elements.name.value = '';
@@ -6,23 +5,25 @@ document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.target.elements.message.value = '';
   });
 
-  document.getElementById('contact-form').addEventListener('submit',function(){alert("Thank you for your message!  \nWe will contact you as soon as possible :)")},false) ;
-=======
- document.querySelector('#contact-form').addEventListener('submit', (e) => {
-     e.preventDefault();
-     e.target.elements.name.value = '';
-     e.target.elements.email.value = '';
-     e.target.elements.message.value = '';
-});
-
   let map;
 
-function initMap() {
+function initMap(z,t) {
+  
+  if (z == null ){
+    map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15,
+      center: new google.maps.LatLng(32.0517, 34.7616),
+      mapTypeId: "terrain",
+    });
+  }
+  else{
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
-    center: new google.maps.LatLng(31.2573952, 34.8028928),
+    center: new google.maps.LatLng(z, t),
     mapTypeId: "terrain",
   });
+}
+
 
   // Create a <script> tag and set the USGS URL as the source.
   const script = document.createElement("script");
@@ -34,8 +35,6 @@ function initMap() {
   document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-// Loop through the results array and place a marker for each
-// set of coordinates.
 const eqfeed_callback = function (results) {
   for (let i = 0; i < results.features.length; i++) {
     const coords = results.features[i].geometry.coordinates;
@@ -45,9 +44,30 @@ const eqfeed_callback = function (results) {
       position: latLng,
       map: map,
     });
-  }
+  } 
 };
-
 window.initMap = initMap;
 window.eqfeed_callback = eqfeed_callback;
->>>>>>> 6dfda598b01103e7ee9c353ecde1e28394dbaf18
+
+
+function GetLocation() {
+  if (navigator.geolocation) {
+  console.log("in get location");
+  navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+  document.getElementById("location_p").innerHTML="Geolocation is not supported by this browser.";
+  }
+  document.getElementById("afterNearby").style.visibility = "visible";
+  document.getElementById("map").style.visibility = "visible";
+}
+  function showPosition(position) {
+      var z = position.coords.latitude;
+      var t = position.coords.longitude;
+      initMap(z,t);
+      // var x = document.getElementById("location_p");
+      // var y = document.getElementsByClassName("button");
+      // x.innerHTML = "Your In <br>" + "Latitude: " + position.coords.latitude +
+      // "<br>Longitude: " + position.coords.longitude;
+      // y.innerHTML = "try me again";
+      // console.log(position);
+  }
