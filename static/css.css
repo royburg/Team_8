@@ -9,7 +9,7 @@
     
   }
   body{
-    background-image: url(../static/Main_page_photo.jpg);
+    -image: url(../static/Main_page_photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family:myFirstFont ;
@@ -43,7 +43,28 @@
 
   
   /* nav -----------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+  .mainGrid{
+      display: grid;
+      grid-template-areas:
+      'Nav'
+      'Picture'
+      'Body'
+      ;
+  }
+  .tohen{
+    margin-top: 0px;
+  }
   
+}
+.parkingNav{
+  grid-area: Nav;
+}
+.mainbtn{
+  grid-area: Body;
+}
+
   .active {
     color: var(--black);
     background-color:var(--headcolor);
@@ -308,6 +329,9 @@
   width: 450px;
   border-radius: 10px;
   margin-bottom: 30px;
+}
+#parkingPic{
+  grid-area: Picture;
 }
 @font-face {
     font-family: myFirstFont;

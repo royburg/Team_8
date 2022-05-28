@@ -12,44 +12,47 @@
     <title>parking</title>
 </head>
 <body class="body2">
-    <div class="backroundblur">
-    <header>
-        <div class="container">
-          <img class="dogIcon" src=""  height="50">
-          <h1 class="logo">Wims</h1>
-              
-          <nav>
-            <ul>
-              <li><a href="main.html">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Donate</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-        </header>
-        <div  class="buttonsContainer">
-            <span id="findScooter_parking">
-                <button id="findScooter_parking" class="button-56" role="button">Find A Scotter</button>
-            </span>
-            <span  id="button2_parking">           
-                 <button class="button-56" role="button">Park My Scooter</button>
-            </span>
-        </div>
-        <div class="tohen">
-          <div>
-            <label for="location">City</label>
-            <select name="cities" id="city">
-              <option value="Tel-Aviv">Tel Aviv</option>
-              <option value="Beer-Sheva">Beer Sheva</option>
-              <option value="Jerusalem">Jerusalem</option>
-              <option value="Los-Angeles">LA</option>
-            </select>
+      <div class="mainGrid">
+        <header>
+          <div class="container">
+            <div class="parkingNav">
+              <h1 class="logo">Wims</h1> 
+              <nav>
+                <ul>
+                  <li><a href="main.html">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Donate</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
           </div>
-          <button id="find" onclick="showPicture()">Find Parking</button></br>
-        </div>
-        <div id="parkingPic">
-          <img id="parking_pic" style="display: none; " src= "picture">
-        </div>
+          </header>
+          <div class="mainbtn">
+            <div  class="buttonsContainer">
+              <span id="findScooter_parking">
+                  <button id="findScooter_parking" class="button-56" role="button">Find A Scotter</button>
+              </span>
+              <span  id="button2_parking">           
+                   <button class="button-56" role="button">Park My Scooter</button>
+              </span>
+          </div>
+          <div class="tohen">
+            <div>
+              <label for="location">City</label>
+              <select name="cities" id="city">
+                <option value="Tel-Aviv">Tel Aviv</option>
+                <option value="Beer-Sheva">Beer Sheva</option>
+                <option value="Jerusalem">Jerusalem</option>
+                <option value="Los-Angeles">LA</option>
+              </select>
+            </div>
+            <button id="find" onclick="showPicture()">Find Parking</button></br>
+          </div>
+          </div>
+          <div id="parkingPic">
+            <img id="parking_pic" style="display: none; " src= "picture">
+          </div>
+      </div>
       </body>
       </html>
