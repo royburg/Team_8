@@ -1,11 +1,19 @@
-
 document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
     e.target.elements.name.value = '';
     e.target.elements.email.value = '';
     e.target.elements.message.value = '';
   });
-
+/* -------------active nav bar*/
+const activePge = window.location.href;
+const navList = document.querySelectorAll('nav a').
+forEach(link => {
+    if(link.href == activePge) {
+        link.classList.add('active');
+      
+    }
+});
+/*---------------- map*/
   let map;
 
 function initMap(z,t) {

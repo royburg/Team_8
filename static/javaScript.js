@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+
+  document.getElementById('contact-form').addEventListener('submit',function(){alert("Thank you for your message!  \nWe will contact you as soon as possible :)")},false) ;
+=======
  document.querySelector('#contact-form').addEventListener('submit', (e) => {
      e.preventDefault();
      e.target.elements.name.value = '';
@@ -40,6 +50,7 @@ const eqfeed_callback = function (results) {
 
 window.initMap = initMap;
 window.eqfeed_callback = eqfeed_callback;
+<<<<<<< HEAD
 
 function showPicture() {
   var sourceOfPicture = "../static/Parking Pictures.png";
@@ -54,3 +65,6 @@ function showMap(){
   var e = document.getElementsByName('cities')[0];
   alert(e.value);
   }
+=======
+>>>>>>> 6dfda598b01103e7ee9c353ecde1e28394dbaf18
+>>>>>>> caabd7591830b3cc2e5d54218d6b973c32e96b18
