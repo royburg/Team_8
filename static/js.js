@@ -1,3 +1,4 @@
+
 document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
     e.target.elements.name.value = '';
@@ -8,7 +9,6 @@ document.querySelector('#contact-form').addEventListener('submit', (e) => {
   let map;
 
 function initMap(z,t) {
-  
   if (z == null ){
     map = new google.maps.Map(document.getElementById("map"), {
       zoom: 15,
@@ -17,7 +17,7 @@ function initMap(z,t) {
     });
   }
   else{
-  map = new google.maps.Map(document.getElementById("map"), {
+    map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
     center: new google.maps.LatLng(z, t),
     mapTypeId: "terrain",
@@ -57,8 +57,8 @@ function GetLocation() {
   } else {
   document.getElementById("location_p").innerHTML="Geolocation is not supported by this browser.";
   }
-  document.getElementById("afterNearby").style.visibility = "visible";
   document.getElementById("map").style.visibility = "visible";
+  document.getElementById("afterNearby").style.visibility = "visible";
 }
   function showPosition(position) {
       var z = position.coords.latitude;
@@ -71,3 +71,17 @@ function GetLocation() {
       // y.innerHTML = "try me again";
       // console.log(position);
   }
+function showMap(){
+  var e = document.getElementsByName('cities')[0];
+  alert(e.value);
+  // initMap(32.1093,34.8554);
+}
+
+function showPicture() {
+  var sourceOfPicture = "../static/Parking Pictures.png";
+  var img = document.getElementById('parking_pic')
+  img.src = sourceOfPicture.replace('10x10', '10x10');
+  img.height = 350;
+  img.widht = 450;
+  img.style.display = "block";
+}

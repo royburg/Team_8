@@ -211,7 +211,6 @@
     border-radius: 10px;
     visibility: hidden;
     margin-bottom: 30px;
-
 }
 #afterNearby{
   visibility: hidden;
@@ -233,6 +232,46 @@
 #calculate{
   margin-left: 200px;
   margin-top: 40px;
+}
+
+#find{
+  text-decoration: none;
+  align-items: center;
+  font-family:  myFirstFont;
+  line-height: 24px;
+  width: 100px;
+  border-radius: 8px;
+  background-color: var(--headcolor);
+  color: #111;
+  height: 30px;
+  margin-left: 50px;
+}
+
+#city{
+  margin-bottom: 20px;
+  margin-top: 92px ;
+  top: 2%;
+  right: 2%;
+  height: 20px;
+  background-color: #e3fef3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  font-family:  myFirstFont;
+  width: 150px;
+  height: 30px;
+}
+#findScooter_parking{
+  visibility: hidden;
+}
+#parkingPic{
+}
+#parking_pic{
+  margin-top: 100px;
+  height: 350px;
+  width: 450px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 @font-face {
     font-family: myFirstFont;
