@@ -40,3 +40,17 @@ const eqfeed_callback = function (results) {
 
 window.initMap = initMap;
 window.eqfeed_callback = eqfeed_callback;
+
+function showPicture() {
+  var sourceOfPicture = "../static/Parking Pictures.png";
+  var img = document.getElementById('parking_pic')
+  img.src = sourceOfPicture.replace('10x10', '10x10');
+  img.height = 350;
+  img.widht = 450;
+  img.style.display = "block";
+}
+function showMap(){
+  console.log('hello');
+  var e = document.getElementsByName('cities')[0];
+  alert(e.value);
+  }
