@@ -1,82 +1,77 @@
-// document.querySelector('#contact-form').addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     e.target.elements.name.value = '';
-//     e.target.elements.email.value = '';
-//     e.target.elements.message.value = '';
+// /* -------------active nav bar*/
+// const activePage = window.location.pathname;
+// const navLinks = document.querySelectorAll('nav a').forEach(link => {    
+//     if(link.href.includes(`${activePage}`)){
+//       link.classList.add('active');
+//     }
 //   });
-/* -------------active nav bar*/
-const activePge = window.location.href;
-const navList = document.querySelectorAll('nav a').
-forEach(link => {
-    if(link.href == activePge) {
-        link.classList.add('active');
-      
-    }
-});
-/*---------------- map*/
-  let map;
 
-function initMap(z,t) {
+function calculate(name){
+    var dist= document.getElementById('distInput').value;
+  let prices  = [
+      { brand: "../static/Lime.jpg", name: "Lime", price: calculate("Lime",dist) },
+      { brand: "../static/Bird.png", name: "Bird", price: calculate("Bird",dist) },
+      { brand: "../static/Wind.png", name: "Wind", price: calculate("Wind",dist) },
+    ];
   
-  if (z == null ){
-    map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 15,
-      center: new google.maps.LatLng(32.0517, 34.7616),
-      mapTypeId: "terrain",
-    });
-  }
-  else{
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: new google.maps.LatLng(z, t),
-    mapTypeId: "terrain",
-  });
-}
-
-
-  // Create a <script> tag and set the USGS URL as the source.
-  const script = document.createElement("script");
-
-  // This example uses a local copy of the GeoJSON stored at
-  // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-  script.src =
-    "https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js";
-  document.getElementsByTagName("head")[0].appendChild(script);
-}
-
-const eqfeed_callback = function (results) {
-  for (let i = 0; i < results.features.length; i++) {
-    const coords = results.features[i].geometry.coordinates;
-    const latLng = new google.maps.LatLng(coords[1], coords[0]);
-
-    new google.maps.Marker({
-      position: latLng,
-      map: map,
-    });
-  } 
-};
-window.initMap = initMap;
-window.eqfeed_callback = eqfeed_callback;
-
-
-function GetLocation() {
-  if (navigator.geolocation) {
-  console.log("in get location");
-  navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-  document.getElementById("location_p").innerHTML="Geolocation is not supported by this browser.";
-  }
-  document.getElementById("afterNearby").style.visibility = "visible";
-  document.getElementById("map").style.visibility = "visible";
-}
-  function showPosition(position) {
-      var z = position.coords.latitude;
-      var t = position.coords.longitude;
-      initMap(z,t);
-      // var x = document.getElementById("location_p");
-      // var y = document.getElementsByClassName("button");
-      // x.innerHTML = "Your In <br>" + "Latitude: " + position.coords.latitude +
-      // "<br>Longitude: " + position.coords.longitude;
-      // y.innerHTML = "try me again";
-      // console.log(position);
+  function calculate(name,dist)
+    {
+      if (name == "Lime")
+      {
+          return (5+dist*1.8*0.45);
+      }
+      if (name == "Bird")
+      {
+        return 4.5+dist*1.8*0.5;
+      }
+      else{
+        return 1.8*0.85*dist
+      }
+  
+    }
+    function generateTableHead(table, data) {
+      let thead = table.createTHead();
+      let row = thead.insertRow(0);
+      for (let key of data) {
+        let th = document.createElement("th");
+        th.id='hd';
+        let text = document.createTextNode(key);
+        th.appendChild(text);
+        row.appendChild(th);
+      }
+    }
+    
+    function generateTable(table, data) {
+      for (let element of data) {
+        let row = table.insertRow();
+        for (key in element) {
+          if(key == "brand")
+          {
+            let cell = row.insertCell();
+            var img = document.createElement('img');
+            img.src = element[key];
+            img.id="pic";
+            cell.appendChild(img);
+          }
+          else{
+          let cell = row.insertCell();
+          let text = document.createTextNode(element[key]);
+          cell.appendChild(text);
+          }
+        }
+      }
+    }
+    var table = document.querySelector("table");
+    let data = Object.keys(prices[0]);
+    generateTableHead(table, data);
+    generateTable(table, prices);
+    replace();
+    function replace()
+    {
+      var aftercompare =  document.getElementById("aftercompare");
+      var compare =  document.getElementById("afterNearby");
+      aftercompare.style.visibility="visible"
+      compare.parentNode.replaceChild(aftercompare, compare);
+    }
+  
   }
