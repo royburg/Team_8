@@ -4,7 +4,16 @@ document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.target.elements.email.value = '';
     e.target.elements.message.value = '';
   });
-
+/* -------------active nav bar*/
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('.nav_bar a').forEach(link => {    
+  if(link.href.includes(`${activePage}`)){
+    link.classList.add('active');
+    
+  }
+  alert('do');
+});
+/*---------------- map*/
   let map;
 
 function initMap(z,t) {
