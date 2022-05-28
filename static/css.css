@@ -1,12 +1,18 @@
 :root{
-  --pink: rgb(240, 128, 128);
-  --headcolor:  #17eaa4;
-  --bej: rgb(213, 213, 148);
-  --black: #222;
-  --gold: gold;
-  --hover: rgba(0, 0, 0, 0.6);
-  --white: ffffff;
-  
+    --pink: rgb(240, 128, 128);
+    --headcolor:  #17eaa4;
+    --bej: rgb(213, 213, 148);
+    --black: #222;
+    --gold: gold;
+    --hover: rgba(0, 0, 0, 0.6);
+    --white: ffffff;
+    
+  }
+  body{
+    -image: url(../static/Main_page_photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:myFirstFont ;
 }
 body{
   background-image: url(../static/Main_page_photo.jpg);
@@ -48,6 +54,39 @@ background-size: cover;
 
 }
 
+  
+  /* nav -----------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+  .mainGrid{
+      display: grid;
+      grid-template-areas:
+      'Nav'
+      'Picture'
+      'Body'
+      ;
+  }
+  .tohen{
+    margin-top: 0px;
+  }
+  
+}
+.parkingNav{
+  grid-area: Nav;
+}
+.mainbtn{
+  grid-area: Body;
+}
+
+  .active {
+    color: var(--black);
+    background-color:var(--headcolor);
+    border-radius: 4px;
+  }
+  #services {
+    color: white;
+    background-color:unset;
+  }
 
 /* nav -----------------------------------------------------------------------*/
 
@@ -319,6 +358,47 @@ height: 350px;
 width: 450px;
 border-radius: 10px;
 margin-bottom: 30px;
+}
+
+#find{
+  text-decoration: none;
+  align-items: center;
+  font-family:  myFirstFont;
+  line-height: 24px;
+  width: 100px;
+  border-radius: 8px;
+  background-color: var(--headcolor);
+  color: #111;
+  height: 30px;
+  margin-left: 50px;
+}
+
+#city{
+  margin-bottom: 20px;
+  margin-top: 92px ;
+  top: 2%;
+  right: 2%;
+  height: 20px;
+  background-color: #e3fef3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  color: #111;
+  font-family:  myFirstFont;
+  width: 150px;
+  height: 30px;
+}
+#findScooter_parking{
+  visibility: hidden;
+}
+#parking_pic{
+  margin-top: 100px;
+  height: 350px;
+  width: 450px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+#parkingPic{
+  grid-area: Picture;
 }
 @font-face {
   font-family: myFirstFont;

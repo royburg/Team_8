@@ -50,4 +50,21 @@ const eqfeed_callback = function (results) {
 
 window.initMap = initMap;
 window.eqfeed_callback = eqfeed_callback;
+<<<<<<< HEAD
+
+function showPicture() {
+  var sourceOfPicture = "../static/Parking Pictures.png";
+  var img = document.getElementById('parking_pic')
+  img.src = sourceOfPicture.replace('10x10', '10x10');
+  img.height = 350;
+  img.widht = 450;
+  img.style.display = "block";
+}
+function showMap(){
+  console.log('hello');
+  var e = document.getElementsByName('cities')[0];
+  alert(e.value);
+  }
+=======
 >>>>>>> 6dfda598b01103e7ee9c353ecde1e28394dbaf18
+>>>>>>> caabd7591830b3cc2e5d54218d6b973c32e96b18
