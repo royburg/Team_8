@@ -5,6 +5,21 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
       link.classList.add('active');
     }
   });
+  document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+  /*picture parking*/
+  function showPicture() {
+    var sourceOfPicture = "../static/Parking Pictures.png";
+    var img = document.getElementById('parking_pic')
+    img.src = sourceOfPicture.replace('10x10', '10x10');
+    img.height = 350;
+    img.widht = 450;
+    img.style.display = "block";
+  }
 
 function calculate(name){
     var dist= document.getElementById('distInput').value;
