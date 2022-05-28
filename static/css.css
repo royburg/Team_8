@@ -18,7 +18,7 @@
   background-image: url(../static/photoBlur.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-    font-family:myFirstFont ;
+  font-family:myFirstFont ;
 }
   .container {
     padding-right: 10px;
@@ -63,7 +63,6 @@
     display: inline-block;
     margin-left:40px;
     padding-top: 43px;
-  
     position: relative;
   }
   
