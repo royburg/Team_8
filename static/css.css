@@ -184,12 +184,11 @@
   position: relative;
 }
 .about_us {
-  /* float: inline-end; */
+  width: 50%;
   margin-top: 10px;
+  margin-left: 100px;
   margin-right: 0px;
   color: white;
-  /* background-color: var(--black);
-  border-radius: 20px; */
   display: flow-root;
   background-color:rgba(0, 0, 0, 0.7);
   border-radius: 15px;
