@@ -1,17 +1,17 @@
-document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
-  });
+// document.querySelector('#contact-form').addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     e.target.elements.name.value = '';
+//     e.target.elements.email.value = '';
+//     e.target.elements.message.value = '';
+//   });
 /* -------------active nav bar*/
-const activePage = window.location.pathname;
-const navLinks = document.querySelectorAll('.nav_bar a').forEach(link => {    
-  if(link.href.includes(`${activePage}`)){
-    link.classList.add('active');
-    
-  }
-  alert('do');
+const activePge = window.location.href;
+const navList = document.querySelectorAll('nav a').
+forEach(link => {
+    if(link.href == activePge) {
+        link.classList.add('active');
+      
+    }
 });
 /*---------------- map*/
   let map;

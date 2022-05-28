@@ -49,6 +49,12 @@
     background-color:var(--headcolor);
     border-radius: 4px;
   }
+  #services {
+    color: white;
+    background-color:unset;
+
+  }
+
   
   nav {
     float: left;
@@ -104,7 +110,7 @@
 /* buttons for the main */
 .buttonsContainer{
   float: left;
-    width: 50%;
+    width: 40%;
     padding: 10px;
     margin-left:100px;
     margin-top: 50px;
@@ -185,6 +191,22 @@
   /* background-color: var(--black);
   border-radius: 20px; */
   display: flow-root;
+  background-color:rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding-left: 50px;
+  margin-right: 100px;
+}
+.our_vision {
+  margin-top: 10px;
+  margin-right: 0px;
+  color: white;
+  display: flow-root;
+  text-align: start;
+  font-size: x-large;
+  background-color:rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding-left: 50px;
+  margin-right: 100px;
 }
 .nearbyBtn{
   padding: 1.3em 3em;
