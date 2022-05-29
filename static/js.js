@@ -5,12 +5,14 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
       link.classList.add('active');
     }
   });
-  document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
-  });
+
+  // document.querySelector('#contact-form').addEventListener('submit', (e) => {
+  //   e.preventDefault();
+  //   e.target.elements.name.value = '';
+  //   e.target.elements.email.value = '';
+  //   e.target.elements.message.value = '';
+  // });
+
   /*picture parking*/
   function showPicture() {
     var sourceOfPicture = "../static/Parking Pictures.png";
@@ -20,7 +22,7 @@ const navLinks = document.querySelectorAll('nav a').forEach(link => {
     img.widht = 450;
     img.style.display = "block";
   }
-
+/* build a comparison table*/
 function calculate(name){
     var dist= document.getElementById('distInput').value;
   let prices  = [
@@ -28,7 +30,7 @@ function calculate(name){
       { brand: "../static/Bird.png", name: "Bird", price: calculate("Bird",dist) },
       { brand: "../static/Wind.png", name: "Wind", price: calculate("Wind",dist) },
     ];
-  
+  /*calculates estimated price*/
   function calculate(name,dist)
     {
       if (name == "Lime")
@@ -44,6 +46,7 @@ function calculate(name){
       }
   
     }
+    /*generate the table heade*/
     function generateTableHead(table, data) {
       let thead = table.createTHead();
       let row = thead.insertRow(0);
@@ -55,7 +58,7 @@ function calculate(name){
         row.appendChild(th);
       }
     }
-    
+    /*generate table content*/
     function generateTable(table, data) {
       for (let element of data) {
         let row = table.insertRow();
@@ -81,6 +84,7 @@ function calculate(name){
     generateTableHead(table, data);
     generateTable(table, prices);
     replace();
+    /*replace the content after pressing calculate*/
     function replace()
     {
       var aftercompare =  document.getElementById("aftercompare");

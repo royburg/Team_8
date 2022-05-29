@@ -20,8 +20,6 @@ function initMap(z,t) {
     mapTypeId: "terrain",
   });
 }
-
-
   // Create a <script> tag and set the USGS URL as the source.
   const script = document.createElement("script");
 
@@ -43,10 +41,11 @@ const eqfeed_callback = function (results) {
     });
   } 
 };
+/*initial the map*/
 window.initMap = initMap;
 window.eqfeed_callback = eqfeed_callback;
 
-
+/*gets location from the user*/
 function GetLocation() {
   if (navigator.geolocation) {
   console.log("in get location");
@@ -57,14 +56,9 @@ function GetLocation() {
   document.getElementById("map").style.visibility = "visible";
   document.getElementById("afterNearby").style.visibility = "visible";
 }
+/*initial the map with the current user location*/
   function showPosition(position) {
       var z = position.coords.latitude;
       var t = position.coords.longitude;
       initMap(z,t);
-      // var x = document.getElementById("location_p");
-      // var y = document.getElementsByClassName("button");
-      // x.innerHTML = "Your In <br>" + "Latitude: " + position.coords.latitude +
-      // "<br>Longitude: " + position.coords.longitude;
-      // y.innerHTML = "try me again";
-      // console.log(position);
   }
