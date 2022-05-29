@@ -61,14 +61,10 @@ background-size: cover;
       display: grid;
       grid-template-areas:
       'Nav'
-      'Picture'
       'Body'
+      'Picture'
       ;
   }
-  .tohen{
-    margin-top: 0px;
-  }
-  
 }
 .parkingNav{
   grid-area: Nav;
@@ -321,20 +317,11 @@ width: 250px;
 margin-left: 200px;
 margin-top: 40px;
 }
-
-#find{
-text-decoration: none;
-align-items: center;
-font-family:  myFirstFont;
-line-height: 24px;
-width: 100px;
-border-radius: 8px;
-background-color: var(--headcolor);
-color: #111;
-height: 30px;
-margin-left: 50px;
+#findParking{
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 20px;
 }
-
 #city{
 margin-bottom: 20px;
 margin-top: 92px ;
@@ -460,4 +447,30 @@ width:90px;
 
 .vision_grid{
   grid-area: vision;
+}
+
+@media screen and (max-width: 1000px) {
+  .bigGrid{
+    display: grid;
+    grid-template-areas:
+    'first'
+    'second'
+    'third';
+  }
+  .tohen{
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .buttonsContainer{
+    margin-top: 30px;
+  }
+}
+.navFindmy{
+  grid-area: first;
+}
+.mainBody{
+  grid-area: second;
+}
+.mapetc{
+  grid-area: third;
 }

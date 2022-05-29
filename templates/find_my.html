@@ -13,28 +13,32 @@
     ></script>
     <title>Find A Scooter</title>
 </head><body class="body2">
-  <div class="backroundblur">
-    <header>
-      <div class="container">
-        <h1 class="logo">Wims</h1>   
-          <nav class = "nav_bar">
-            <ul>
-              <li><a href="main.html">Home</a></li>
-              <li><a href="find_my.html">Find My Scooter</a></li>
-              <li><a href="parking.html">Parking</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-      </div>
+  <div class="bigGrid">
+    <div class="backroundblur">
+      <header>
+        <div class="container">
+          <div class="navFindmy">
+            <h1 class="logo">Wims</h1>   
+            <nav class = "nav_bar">
+              <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="find_my.html">Find My Scooter</a></li>
+                <li><a href="parking.html">Parking</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </header>
+      <div class="mainBody">
         <div  class="buttonsContainer">
-            <span id="button1">
-                <button  class="button-56" role="button">Find A Scotter</button>
-            </span>
-            <span  id="button2">           
-                <button class="button-56" role="button">Park My Scooter</button>
-            </span>
+          <span id="button1">
+            <button  class="button-56" role="button">Find A Scotter</button>
+          </span>
+          <span  id="button2">           
+            <button class="button-56" role="button">Park My Scooter</button>
+          </span>
         </div>
         <div class="tohen">
           <div>
@@ -46,7 +50,9 @@
             </select>
           </div>
             <button class="nearbyBtn" onclick="GetLocation()">Nearby Scooters</button></br>
-          </div>     
+          </div>  
+        </div>   
+        <div class="mapetc" >
           <div id="map"></div>
           <div id="afterNearby">
             <span class="compare">
@@ -57,13 +63,16 @@
               <button class="nearbyBtn" id="calculate" onclick="calculate()">calculate</button>
             </span>
           </div>
-          <div id="aftercompare">
-            <table>
-            </table>
-            <div><button class="nearbyBtn" id="aftercompareBtn" onclick="location.href='find_my.html';">Re-Select</button>
+            <div id="aftercompare">
+              <table>
+              </table>
+              <div><button class="nearbyBtn" id="aftercompareBtn" onclick="location.href='find_my.html';">Re-Select</button>
+              </div>
             </div>
-          </div>
-        <script src="../static/js.js" ></script>  
-        </div>  
+          <script src="../static/js.js" ></script>  
+        </div>
+    </div>  
+  </div>
+
       </body>
       </html>
